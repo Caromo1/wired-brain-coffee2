@@ -1,0 +1,13 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
+    steps:
+      - checkout
+      - run:
+          name: saludos
+          command: echo Hellow, word
+      - run:
+          name: Imprime fecha 
+          command: date
