@@ -6,8 +6,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: saludos
-          command: echo Hellow, word
+          name: dependencias 
+          command: bundle install
+          
+       - run:
+          name: Compilar sitio 
+          command: bundle exec jekyll build 
+          
       - run:
           name: Imprime fecha 
           command: date
